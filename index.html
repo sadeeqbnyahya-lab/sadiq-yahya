@@ -2,92 +2,285 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First Website</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestlé | Company Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #005baa;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,91,170,0.8), rgba(0,91,170,0.8));
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px 25px;
+            border-radius: 5px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            margin-bottom: 15px;
+            color: #005baa;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #fafafa;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .product h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #005baa;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #004a8a;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-    <h1>Welcome to My Website</h1>
-    <p>Learning HTML & CSS step by step</p>
+        <div style="display:flex; align-items:center; justify-content:center; gap:15px; flex-wrap:wrap;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Nestle_textlogo.svg" alt="Nestlé Logo" style="width:150px; height:auto;">
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#order">Order & Deposit</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Skills</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+    <div class="hero" style="background:url('hero.jpg') no-repeat center center/cover; height:320px; position:relative;">
+        <div style="background:rgba(0,0,0,0.6); width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+            <h2 style="color:#fff; font-size:32px; text-align:center; padding:20px;">Good Food, Good Life</h2>
+        </div>
+    </div>
+    </div>
 
-    <nav class="navbar">
-  <h1>Sadeeq</h1>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#skills">Skills</a></li>
-  </ul>
-</nav>
-        <p>
-            My name is Sadeeq. I am learning web development.
-            This is my first website created using HTML and CSS.
-        </p>
-    </section>
+    <div class="container">
+        <section id="about">
+            <h2>About Nestlé</h2>
+            <p>
+                Nestlé is the world's largest food and beverage company, committed to improving quality of life and contributing to a healthier future. Founded in 1866, Nestlé operates in over 180 countries, providing nutritious, safe, and high-quality products.
+            </p>
+            <p>
+                Our mission is simple: <strong>Good Food, Good Life</strong>. We aim to help people live healthier lives while caring for the environment and communities.
+            </p>
 
-    <section class="skills">
-        <h2>My Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Beginner Web Design</li>
-        </ul>
-    </section>
+            
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/7b/Milo_Logo.svg" alt="Milo" style="width:100%; max-height:150px; object-fit:contain; margin-bottom:10px;">
+                    <h3>Milo</h3>
+                    <p>Nutritious chocolate malt drink that gives energy and strength.</p>
+                </div>
+                <div class="product">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Maggi_logo.svg" alt="Maggi" style="width:100%; max-height:150px; object-fit:contain; margin-bottom:10px;">
+                    <h3>Maggi</h3>
+                    <p>Seasoning cubes and noodles that make meals delicious.</p>
+                </div>
+                <div class="product">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Nescafe_logo.svg" alt="Nescafé" style="width:100%; max-height:150px; object-fit:contain; margin-bottom:10px;">
+                    <h3>Nescafé</h3>
+                    <p>Premium coffee enjoyed by millions worldwide.</p>
+                </div>
+                <div class="product">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Cerelac_logo.svg" alt="Cerelac" style="width:100%; max-height:150px; object-fit:contain; margin-bottom:10px;">
+                    <h3>Cerelac</h3>
+                    <p>Healthy and nutritious food for babies and toddlers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="why">
+            <h2>Why Choose Nestlé</h2>
+            <ul style="margin-left:20px;">
+                <li>Trusted global brand with over 150 years of experience</li>
+                <li>High-quality and nutritious products</li>
+                <li>Strict quality control and food safety standards</li>
+                <li>Widely available and affordable products</li>
+            </ul>
+        </section>
+
+        <section id="how-it-works">
+            <h2>How Ordering Works</h2>
+            <ol style="margin-left:20px;">
+                <li>Select your preferred Nestlé product</li>
+                <li>Fill in your order details</li>
+                <li>Make a deposit to the provided bank account</li>
+                <li>Submit your transaction reference</li>
+                <li>Your order will be confirmed and processed</li>
+            </ol>
+        </section>
+
+        <section id="order">
+            <h2>Place an Order</h2>
+            <form class="contact-form">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" placeholder="Your full name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Your email" required>
+
+                <label for="product">Select Product</label>
+                <select id="product" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
+                    <option value="">-- Choose a product --</option>
+                    <option value="milo">Milo</option>
+                    <option value="maggi">Maggi</option>
+                    <option value="nescafe">Nescafé</option>
+                    <option value="cerelac">Cerelac</option>
+                </select>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" placeholder="Enter quantity" min="1" required>
+
+                <label for="address">Delivery Address</label>
+                <textarea id="address" rows="4" placeholder="Enter delivery address" required></textarea>
+
+                <h3 style="margin-top:20px; color:#005baa;">Deposit Payment</h3>
+
+                <div style="background:#f1f6fb; border:1px solid #005baa; padding:15px; border-radius:6px; margin:15px 0;">
+                    <h4 style="color:#005baa; margin-bottom:10px;">Paystack Online Payment</h4>
+                    <p>You can pay your deposit securely using Paystack.</p>
+                    <button type="button" style="margin-top:10px; padding:10px 20px; background:#0aa83f; color:#fff; border:none; border-radius:4px; cursor:pointer;">Pay with Paystack</button>
+                </div>
+
+                <div style="background:#f1f6fb; border:1px solid #005baa; padding:15px; border-radius:6px; margin:15px 0;">
+                    <h4 style="color:#005baa; margin-bottom:10px;">Bank Deposit Details</h4>
+                    <p><strong>Bank Name:</strong> OPay Bank</p>
+                    <p><strong>Account Number:</strong> 9121031077</p>
+                    <p><strong>Note:</strong> After payment, enter your transaction reference.</p>
+                </div>
+
+                <label for="reference">Payment Reference / Transaction ID</label>
+                <input type="text" id="reference" placeholder="Enter transaction ID" required>
+
+                <button type="submit">Submit Order</button>
+            </form>
+        </section>
+    <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have questions about your order or deposit, feel free to contact us.</p>
+            <form class="contact-form">
+                <label for="cname">Name</label>
+                <input type="text" id="cname" placeholder="Your name" required>
+
+                <label for="cemail">Email</label>
+                <input type="email" id="cemail" placeholder="Your email" required>
+
+                <label for="cmessage">Message</label>
+                <textarea id="cmessage" rows="4" placeholder="Your message"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
 
     <footer>
-        <p>© 2026 My First Website</p>
+        <p>&copy; 2026 Nestlé. All rights reserved.</p>
     </footer>
 
 </body>
 </html>
-
-<img src="images/profile.jpg" alt="My Photo" class="profile-img">
-
-<section class="about">
-    <h2>About Me</h2>
-    <img src="images/profile.jpg" alt="My Photo" class="profile-img">
-    <p>
-        My name is Sadeeq. I am learning web development.
-        This is my first website created using HTML and CSS.
-    </p>
-</section>
-<section class="contact">
-    <h2>Contact Me</h2>
-<form action="https://formspree.io/f/xbldkqzy" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
-    
-</section>
-<section class="skills">
-    <h2>My Skills</h2>
-    <div class="skills-box">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">Beginner Web Design</div>
-    </div>
-</section>
-<section class="about" id="about">
-  <h2>About Me</h2>
-  <p>
-    My name is Sadeeq Yahya. I am a beginner web designer learning HTML and CSS.
-    I love building simple and clean websites and improving my skills every day.
-  </p>
-</section>
-
-<section class="contact" id="contact"></section>
-<section class="skills" id="skills"></section>
-<footer class="footer">
-  <p>© 2026 Sadeeq Yahya | Web Designer</p>
-</footer>
-
